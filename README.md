@@ -16,6 +16,7 @@ This project recreates a calibration workflow where an operator draws and manage
 - Locally runnable application
 - Git repository or ZIP delivery
 - README with setup, approach, assumptions, limitations, time spent, and AI usage
+- Build, lint, and test commands verified locally
 
 ## Run Locally
 
@@ -35,6 +36,7 @@ Open the app in the browser and use:
 npm run dev
 npm run build
 npm run lint
+npm run test:run
 ```
 
 ## Implemented Functionality
@@ -168,9 +170,6 @@ All saved regions use a uniform polygon schema, including rectangles.
 ```text
 public/
   calibration-table.png
-  aeyesky-logo.png
-  tab-icon.png
-  tab-icon-32.png
 src/
   App.tsx
   App.css
@@ -180,5 +179,5 @@ src/
 ## Notes
 
 - The calibration screen was iterated toward the supplied Figma/screenshots while keeping the prototype self-contained
-- Browser favicon updates may require a hard refresh or reopening the tab because favicon caching is aggressive
-- If any requirement is considered incomplete, the main remaining gap would be production-grade backend integration and broader automated coverage for low-level pointer geometry cases
+- The main non-goal is backend integration; save is intentionally simulated with JSON export and local persistence
+- If anything remains beyond the requested prototype scope, it would be broader geometry edge-case coverage and production integration concerns rather than missing core exercise functionality
